@@ -1,4 +1,4 @@
-package com.errorlogger;
+package com.Testing;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,6 +9,7 @@ public class InstallTest {
 
    try {
       Connection c = DriverManager.getConnection("jdbc:sqlite:test.db");
+      c.close();
    } 
    catch (Exception err) {
       System.err.println(err.getClass().getName() + ": " + err.getMessage() );
