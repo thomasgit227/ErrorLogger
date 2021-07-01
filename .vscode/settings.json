@@ -1,7 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "errorlogger/src/main/java/com/errorlogger"
-    ],
-    "sqltools.connections": [],
-    "sqltools.useNodeRuntime": true
-}
