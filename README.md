@@ -1,1 +1,1 @@
-# ErrorLogger
+A Mock Error Logger buit with SQLite3 and Java
