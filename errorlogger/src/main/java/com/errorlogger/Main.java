@@ -1,4 +1,6 @@
 package com.errorlogger;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.*;
 import java.sql.*;
 
 public class Main {
@@ -9,15 +11,7 @@ public class Main {
   
            Statement statement = connection.createStatement();
            //May God Bless this Poor Formatting
-           String sql = "CREATE TABLE ERROR_LOG " +
-                        "(ID INT PRIMARY KEY, " +
-                        "USER_CREATED_BY TEXT NOT NULL, " +
-                        "DATE_CREATED DATETIME NOT NULL, " +
-                        "EXCEPTION_THROWN TEXT, " +
-                        "STACKTRACE TEXT, " +
-                        "ERROR_MESSAGE TEXT NOT NULL, " +
-                        "SEVERITY INT, " +
-                        "SOURCE TEXT)";
+           String sql = Files.readString(Paths.get("errorlogger/src/main/java/com/errorlogger/TableCreation.sql"), StandardCharsets.US_ASCII);
 
            statement.executeUpdate(sql);
            statement.close();
