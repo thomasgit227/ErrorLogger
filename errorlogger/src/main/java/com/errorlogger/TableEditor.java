@@ -1,6 +1,8 @@
 package com.errorlogger;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TableEditor {
 
@@ -24,8 +26,16 @@ public class TableEditor {
 
     //Minimum Requirments
     public void insertRow(String user, String exceptionThrown, String errorMsg) {
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy:MM:dd:HH:mm:ss : z");
+        String currentDate = formatter.format(new Date());
+
         try {
-            statement.execute("INSERT into ERROR_LOG");
+            statement.execute(
+                "INSERT into ERROR_LOG " +
+                "(USER_CREATED_BY, DATE_CREATED, EXCEPTION_THROWN, ERROR_MSG) VALUES " +
+                "('" + user + "', '" + currentDate + "', '" + exceptionThrown + "', '" + errorMsg + "')"
+            );
         } 
         catch (SQLException e) {
             e.printStackTrace();

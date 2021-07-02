@@ -5,7 +5,9 @@ import java.sql.*;
 
 public class Main {
     public static void main( String args[] ) {
+        TableEditor tableEdit = new TableEditor();
         createInitialDB();
+        tableEdit.insertRow("Thomas", "Overflow", "Too Cool 4 U");
     }
 
     public static void createInitialDB() {
