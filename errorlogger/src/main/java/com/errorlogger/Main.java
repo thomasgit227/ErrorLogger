@@ -6,8 +6,10 @@ import java.sql.*;
 public class Main {
     public static void main( String args[] ) {
         TableEditor tableEdit = new TableEditor();
-        createInitialDB();
-        tableEdit.insertRow("Thomas", "Overflow", "Too Cool 4 U");
+        // createInitialDB();
+        // tableEdit.insertRow("Thomas", "Overflow", "Too Cool 4 U");
+        // tableEdit.insertRow("Dan", "Overflow", "Too Cool 4 U");
+       tableEdit.readEntireTable();
     }
 
     public static void createInitialDB() {

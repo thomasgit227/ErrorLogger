@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/git,windows,visualstudiocode,java,maven,database
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,windows,visualstudiocode,java,maven,database
+# Created by https://www.toptal.com/developers/gitignore/api/git,windows,visualstudiocode,database,java
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,windows,visualstudiocode,database,java
 
 ### Database ###
 *.accdb
@@ -50,19 +50,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-### Maven ###
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -105,4 +92,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/git,windows,visualstudiocode,java,maven,database
+# End of https://www.toptal.com/developers/gitignore/api/git,windows,visualstudiocode,database,java
